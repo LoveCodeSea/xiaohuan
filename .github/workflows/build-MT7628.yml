@@ -34,6 +34,7 @@ jobs:
       run: |
         cd toolchain-mipsel
         sh dl_toolchain.sh
+        curl --create-dirs -L https://golang.google.cn/dl/go1.15.2.linux-amd64.tar.gz -o /opt/rt-n56u/trunk/tools/go/go1.15.2.linux-amd64.tar.gz
         mkdir -p /opt/images/
     - name: Build Firmware
       env:
